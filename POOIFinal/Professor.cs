@@ -15,12 +15,29 @@ namespace POOIFinal
             this.Disciplinas = new();
             AdicionarDisciplina(disciplina);
         }
+
+        public Professor(string nome, int idade) : base(nome, idade)
+        {
+            this.Disciplinas = new();
+            
+           
+        }
+
         public void AdicionarDisciplina(Disciplina disciplina)
         {
-            this.Disciplinas.Add(disciplina);
+           Disciplinas.Add(disciplina);
+           Console.WriteLine($"Professor {this.Nome} atribuida a disciplina: {disciplina.Titulo}.");
         }
         public void Imprimir()
         {
+            Console.WriteLine("Lista de disciplinas matriculados:");
+                foreach (var disciplina in Disciplinas)
+                {
+                    Console.WriteLine($"{disciplina.Titulo}");
+                }
+
+
+           
 
         }
     }
