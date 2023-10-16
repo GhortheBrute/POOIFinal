@@ -23,5 +23,16 @@ namespace POOIFinal
             this.Cursos.Add(curso);
             Console.WriteLine($"Aluno {this.Nome} matriculado no Curso {curso.Nome}.");
         }
+
+        public void ExibeCursos()
+        {
+            Console.WriteLine("Lista de cursos matriculados:");
+            foreach (var curso in Cursos)
+            {
+                Console.WriteLine($"{curso.Nome}");
+            }
+
+
+        }
     }
 }
