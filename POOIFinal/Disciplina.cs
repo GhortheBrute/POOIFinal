@@ -18,6 +18,7 @@ namespace POOIFinal
             this.Titulo = titulo;
             this.CargaHoraria = cargaHoraria;
             this.Ementa = ementa;
+
             this.NomeProfessor = professor;
         }
     }

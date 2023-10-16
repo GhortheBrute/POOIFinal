@@ -9,10 +9,19 @@ namespace POOIFinal
     internal class Aluno : Pessoa
     {
         public int Matricula { get; private set; }
+        public List<Curso> Cursos { get; private set; }
 
-        public Aluno(string nome, int idade, int matricula) : base(nome, idade)
+        public Aluno(string nome, int idade, int matricula, Curso curso) : base(nome, idade)
         {
+            this.Cursos = new();
             this.Matricula = matricula;
+            MatricularCurso(curso);
+
+        }
+        public void MatricularCurso(Curso curso)
+        {
+            this.Cursos.Add(curso);
+            Console.WriteLine($"Aluno {this.Nome} matriculado no Curso {curso.Nome}.");
         }
     }
 }
