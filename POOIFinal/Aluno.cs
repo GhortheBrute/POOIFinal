@@ -18,6 +18,13 @@ namespace POOIFinal
             MatricularCurso(curso);
 
         }
+        public Aluno(string nome, int idade, int matricula) : base(nome, idade)
+        {
+            this.Cursos = new();
+            this.Matricula = matricula;
+            
+
+        }
         public void MatricularCurso(Curso curso)
         {
             this.Cursos.Add(curso);

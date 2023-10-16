@@ -22,6 +22,14 @@ namespace POOIFinal
             AdicionarDisciplina(disciplina);
             MatricularAluno(aluno);
         }
+        public Curso(string nome, int codigo)
+        {
+            this.Nome = nome;
+            this.Codigo = codigo;
+            this.Disciplinas = new();
+            this.Matriculados = new();
+            
+        }
         public void AdicionarDisciplina(Disciplina disciplina)
         {
             this.Disciplinas.Add(disciplina);
