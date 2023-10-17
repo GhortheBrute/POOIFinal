@@ -38,6 +38,13 @@ namespace POOIFinal
         {
             this.Matriculados.Add(aluno);
         }
+        public void ExibirDisciplinas(Curso curso)
+        {
+            foreach (var disciplina in this.Disciplinas)
+            {
+                Console.WriteLine($"Disciplina:\t{disciplina.Titulo}\nProfessor:\t{disciplina.NomeProfessor}");
+            }
+        }
 
     }
 }

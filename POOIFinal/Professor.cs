@@ -30,7 +30,7 @@ namespace POOIFinal
         }
         public void Imprimir()
         {
-            Console.WriteLine("Lista de disciplinas matriculados:");
+            Console.WriteLine($"Lista de disciplinas do professor {this.Nome}:");
                 foreach (var disciplina in Disciplinas)
                 {
                     Console.WriteLine($"{disciplina.Titulo}");

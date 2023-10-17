@@ -37,6 +37,7 @@ namespace POOIFinal
             foreach (var curso in Cursos)
             {
                 Console.WriteLine($"{curso.Nome}");
+                
             }
 
 
