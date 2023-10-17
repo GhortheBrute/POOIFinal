@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using POOIFinal;
 
 namespace POOIFinal
 {
@@ -30,17 +32,27 @@ namespace POOIFinal
             this.Matriculados = new();
             
         }
+        public Curso()
+        {
+
+        }
         public void AdicionarDisciplina(Disciplina disciplina)
         {
             this.Disciplinas.Add(disciplina);
+        }
+        public static void SMatricularAluno(Aluno aluno)
+        {
+            Curso vazio = new();
+            vazio.MatricularAluno(aluno);
         }
         public void MatricularAluno(Aluno aluno)
         {
             this.Matriculados.Add(aluno);
         }
-        public void ExibirDisciplinas(Curso curso)
+        public void ExibirDisciplinas()
         {
-            foreach (var disciplina in this.Disciplinas)
+            Console.WriteLine($"Curso:\t{this.Nome}");
+            foreach (var disciplina in Disciplinas)
             {
                 Console.WriteLine($"Disciplina:\t{disciplina.Titulo}\nProfessor:\t{disciplina.NomeProfessor}");
             }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using POOIFinal;
 
 namespace POOIFinal
 {
@@ -27,6 +28,7 @@ namespace POOIFinal
         {
            Disciplinas.Add(disciplina);
            Console.WriteLine($"Professor {this.Nome} atribuida a disciplina: {disciplina.Titulo}.");
+           
         }
         public void Imprimir()
         {

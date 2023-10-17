@@ -18,9 +18,15 @@ namespace POOIFinal
             Disciplina calculoI = new Disciplina("Cálculo I", 60, "Introdução ao cálculo e Diferenciais.", moises);
             Disciplina calculoII = new Disciplina("Cálculo II", 60, "Integrais e Operações.", moises);
 
+            //adiciona disciplinas ao professor
             pedro.AdicionarDisciplina(algebra);
             moises.AdicionarDisciplina(calculoI);
             moises.AdicionarDisciplina(calculoII);
+
+            //adiciona disciplinas ao curso
+            matematica.AdicionarDisciplina(algebra);
+            matematica.AdicionarDisciplina(calculoII);
+            matematica.AdicionarDisciplina(calculoI);
 
             Console.WriteLine("\nDisciplina");
             Console.WriteLine("Pedro");

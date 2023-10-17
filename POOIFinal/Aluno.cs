@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using POOIFinal;
 
 namespace POOIFinal
 {
@@ -33,10 +34,16 @@ namespace POOIFinal
 
         public void ExibeCursos()
         {
-            Console.WriteLine("Lista de cursos matriculados:");
+            Console.WriteLine("\nLista de cursos matriculados:");
             foreach (var curso in Cursos)
             {
                 Console.WriteLine($"{curso.Nome}");
+                Console.WriteLine("\nLista de Disciplinas:");
+                var buscaDisciplinas = Cursos.SelectMany(a => a.Disciplinas).ToList();
+                foreach (var disciplina in buscaDisciplinas)
+                {
+                    Console.WriteLine($"{disciplina.Titulo}");
+                }
                 
             }
 
