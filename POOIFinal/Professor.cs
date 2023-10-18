@@ -42,20 +42,23 @@ namespace POOIFinal
         //    {
         //        Cursos.Add(Curso.BuscarCurso(disciplina));
         //    }
-            
+
         //}
         public void Imprimir()
         {
             Console.WriteLine($"Lista de disciplinas do professor {this.Nome}:");
             foreach (var disciplina in Disciplinas)
             {
-                Console.WriteLine($"{disciplina.Titulo}");
-                
-            //var buscaCurso = Curso.BuscarCurso;
-            //foreach (var materia in buscaCurso)
-            //{
-            //    Console.WriteLine($"{materia.Nome}");
-            //}
+                Console.WriteLine($"\nDisciplina: {disciplina.Titulo}");
+                foreach(var curso in disciplina.Cursos)
+                {
+                    Console.WriteLine($"No curso de {curso.Nome}");
+                }
+                //var buscaCurso = Curso.BuscarCurso;
+                //foreach (var materia in buscaCurso)
+                //{
+                //    Console.WriteLine($"{materia.Nome}");
+                //}
 
             }
             foreach (var curso in Cursos)
@@ -67,5 +70,18 @@ namespace POOIFinal
 
 
         }
+        //public void Imprimir()
+        //{
+        //    Console.WriteLine("Cursos e Disciplinas lecionadas por " + Nome + ":");
+        //    foreach (var curso in Cursos)
+        //    {
+        //        Console.WriteLine("- Curso: " + curso.Nome);
+        //        Console.WriteLine("  Disciplinas:");
+        //        foreach (var disciplina in curso.Disciplinas)
+        //        {
+        //            Console.WriteLine("  - " + disciplina.Titulo);
+        //        }
+        //    }
+        //}
     }
 }

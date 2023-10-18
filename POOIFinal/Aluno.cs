@@ -36,7 +36,7 @@ namespace POOIFinal
         public void MatricularCurso(Curso curso)
         {
             this.Cursos.Add(curso);
-            Console.WriteLine($"Aluno {this.Nome} matriculado no Curso {curso.Nome}.");
+            //Console.WriteLine($"Aluno {this.Nome} matriculado no Curso {curso.Nome}.");
             Curso.SMatricularAluno(this, curso);
         }
 
