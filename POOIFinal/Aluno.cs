@@ -37,7 +37,7 @@ namespace POOIFinal
         {
             this.Cursos.Add(curso);
             //Console.WriteLine($"Aluno {this.Nome} matriculado no Curso {curso.Nome}.");
-            Curso.SMatricularAluno(this, curso);
+            curso.MatricularAluno(this);
         }
 
         public void ExibeCursos()
@@ -47,12 +47,26 @@ namespace POOIFinal
             {
                 Console.WriteLine($"{curso.Nome}");
                 Console.WriteLine("\nLista de Disciplinas:");
+
+                //Aqui você está fazendo a pesquisa em todos os cursos em que ele está matriculado
+                // mantendo assim, quando ele estiver em mais de um curso,
+                // irá exibir todas as disciplinas de todos os cursos em um curso só
+                // a exibição deve ser feita em cima da variável curso do foreach
+                /* Verifique o aluno1
+                 * como estava:
                 var buscaDisciplinas = Cursos.SelectMany(a => a.Disciplinas).ToList();
                 foreach (var disciplina in buscaDisciplinas)
                 {
                     Console.WriteLine($"{disciplina.Titulo}");
                 }
-                
+                */
+                // como ficaria
+                foreach (var disciplina in curso.Disciplinas)
+                {
+                    Console.WriteLine($"{disciplina.Titulo}");
+                }
+                //ou poderia ser feito utilizando string.Join();
+                //Console.WriteLine("\n" + string.Join("\n", curso.Disciplinas.Select(x => x.Titulo)));
             }
 
 

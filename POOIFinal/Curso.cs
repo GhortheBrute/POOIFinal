@@ -22,7 +22,7 @@ namespace POOIFinal
             this.Disciplinas = new();
             this.Matriculados = new();
             AdicionarDisciplina(disciplina);
-            MatricularAluno(aluno, this);
+            MatricularAluno(aluno);
         }
         public Curso(string nome, int codigo)
         {
@@ -42,14 +42,9 @@ namespace POOIFinal
             this.Disciplinas.Add(disciplina);
             disciplina.Cursos.Add(this);
         }
-        public static void SMatricularAluno(Aluno aluno, Curso curso)
+        public void MatricularAluno(Aluno aluno)
         {
-            Curso vazio = new();
-            vazio.MatricularAluno(aluno, curso);
-        }
-        public void MatricularAluno(Aluno aluno, Curso curso)
-        {
-            curso.Matriculados.Add(aluno);
+            this.Matriculados.Add(aluno);
             Console.WriteLine("Aluno Matriculado.");
         }
         public void ExibirDisciplinas(Professor professor)

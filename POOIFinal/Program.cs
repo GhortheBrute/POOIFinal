@@ -68,6 +68,7 @@ namespace POOIFinal
             Console.WriteLine("\nCurso");
 
             aluno1.MatricularCurso(matematica);
+            aluno1.MatricularCurso(administracao);
             aluno1.ExibeCursos();
             Console.WriteLine();
             aluno2.MatricularCurso(administracao);
